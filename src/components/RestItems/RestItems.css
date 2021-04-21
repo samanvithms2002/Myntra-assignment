@@ -1,0 +1,16 @@
+.parentRest{
+    display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+   font-size: small;
+   font-weight: 500;
+
+}
+.wishlist,.bag{
+    vertical-align: middle;
+}
+@media (max-width:768px){
+    .name{
+        visibility: hidden;
+    }
+}

@@ -1,0 +1,59 @@
+.sort{
+    text-align: right;
+    padding-right: 20px;
+}
+label{
+    margin-right: 10px;
+    text-align: left;
+}
+select{
+    border: none;
+}
+.sort{
+    /* width: 25%; */
+    padding: 7px;
+    /* float: right; */
+    border: 1px solid rgb(231, 231, 231);
+}
+.ImageData{
+    margin-top: 7px;
+    padding: 10px;
+    padding-top: 20px;
+    border: 1px solid rgb(230, 230, 230);
+    /* border-left: 0; */
+    display: flex;
+    flex-direction: column;
+    
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom:10px ;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+   
+    flex-direction: column;
+    justify-content: center;
+
+    /* flex-flow: row wrap; */
+    width: 30%;
+    
+    
+}
+.card-Image{
+
+height: 200px;
+width: 100%;
+margin-right: 0;
+background-color: grey;
+}
+@media (max-width:768px){
+    /* .card{
+        flex:50% ;
+        
+    } */
+}
