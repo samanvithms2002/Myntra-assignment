@@ -1,7 +1,15 @@
 import React from "react";
+import Product from "../Product/Product";
 import "./MainData.css";
-class MainData extends React.Component{
-    render(){
+// const products=[
+//     {id:1,name:"Shoes",description:"running Shoes", price:"$10.0", img:"https://rendering.documents.cimpress.io/v1/vp/preview?width=690&height=690&quality=80&scene=https://scene.products.cimpress.io/v1/scenes/39fff789-7ad5-4b08-8faf-753d0c960f48"},
+//     {id:2,name:"Macbook",description:"Apple Macbook",price:"15.0", img:"https://rendering.documents.cimpress.io/v1/vp/preview?width=690&height=690&quality=80&scene=https://scene.products.cimpress.io/v1/scenes/39fff789-7ad5-4b08-8faf-753d0c960f48"}
+// ]
+
+const MainData =({products ,onAddToCart, addTrip,change})=>{
+//    console.log(products)
+
+
         return(
             <div>
                 <div className="sort">
@@ -15,48 +23,28 @@ class MainData extends React.Component{
                  </div> 
                 <div className="ImageData">
                 <div className="row">
-                    <div className="card">
-                        <div className="card-Image"></div>
-                        <div className="ShirtName"> Name</div>
-                        <div className="metadata">Some MetaData</div>
-                    </div>
+                
+                
+                {
+                    products.map((product)=>(
 
-                    <div className="card">
-                        <div className="card-Image"></div>
-                        <div className="ShirtName"> Name</div>
-                        <div className="metadata">Some MetaData</div>
-                    </div>
-
-                    <div className="card">
-                        <div className="card-Image"></div>
-                        <div className="ShirtName"> Name</div>
-                        <div className="metadata">Some MetaData</div>
-                    </div>
+                        
+                        <Product productDetails={product} onAddToCart={onAddToCart} addTrip={addTrip} change={change}/>
+                       
+                    ))
                    
+                }
+                
+               
+              
+              
+                
+                
                     </div>
-
-                    {/* <div className="row">
-                    <div className="card">
-                        <div className="card-Image"></div>
-                        <div className="ShirtName"> Name</div>
-                        <div className="metadata">Some MetaData</div>
-                    </div>
-
-                    <div className="card">
-                        <div className="card-Image"></div>
-                        <div className="ShirtName"> Name</div>
-                        <div className="metadata">Some MetaData</div>
-                    </div>
-
-                    <div className="card">
-                        <div className="card-Image"></div>
-                        <div className="ShirtName"> Name</div>
-                        <div className="metadata">Some MetaData</div>
-                    </div>
-                    </div> */}
                 </div>
             </div>
         )
-    }
+       
+    
 }
 export default MainData;
