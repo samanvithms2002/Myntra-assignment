@@ -10,10 +10,17 @@ select{
     border: none;
 }
 .sort{
-    /* width: 25%; */
-    padding: 7px;
+    /* width: 50%; */
+    padding: 8px;
+    /* margin-right: 0; */
     /* float: right; */
-    border: 1px solid rgb(231, 231, 231);
+    /* border: 1px solid rgb(231, 231, 231); */
+}
+.sort-title
+{
+    font-size: medium;
+    font-weight: 700;
+    color:#282c3f;
 }
 .ImageData{
     margin-top: 7px;

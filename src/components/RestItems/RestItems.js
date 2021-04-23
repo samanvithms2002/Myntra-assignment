@@ -20,7 +20,12 @@ const RestItems = ({totalItems})=>{
                     <div className="bag">
                 <Link to="/cart">
                     <img src={Bag} className="bag" width="15px" alt="bag"/>
-                    <span className="icon-badge">{totalItems}</span>
+                    {
+                        totalItems!==0 &&(
+                            <span className="icon-badge">{totalItems}</span>
+                        ) 
+                    }
+                   
                     </Link>
                     <div className="name"> Bag</div>
                 </div>

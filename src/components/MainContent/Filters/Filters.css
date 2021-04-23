@@ -24,6 +24,7 @@
     border: 1px solid rgb(226, 225, 225);
     border-left:none ;
     border-right: 0;
+    border-bottom: 1px solid rgb(226, 225, 225);
 }
 .radio{
     border-bottom: none;
@@ -31,6 +32,14 @@
 .Brand{
     border-top: none;
 }
+input{
+    margin-right: 5px;
+}
 .radioChild,.checkboxChild{
     margin: 5px;
+    padding: 10px;
+    color: #282c3f;
+}
+input[type="checkbox"] :checked{
+    background-color: #ff3e6c;
 }

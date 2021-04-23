@@ -1,9 +1,10 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link,useHistory } from "react-router-dom";
+
 import "./Cart.css"
 
 const Cart =({cart ,handleUpdateToCart, handleRemoveFromCart, handleEmptyCart})=>{
-    
+    const history=useHistory();
 
     const EmptyCart=()=>{
         return(
@@ -17,6 +18,9 @@ const Cart =({cart ,handleUpdateToCart, handleRemoveFromCart, handleEmptyCart})=
             </div>
             
         )
+    }
+    const pusher=()=>{
+        history.push("/checkout")
     }
 
     const FilledCart = ()=>{
@@ -54,7 +58,10 @@ const Cart =({cart ,handleUpdateToCart, handleRemoveFromCart, handleEmptyCart})=
                 </div>
                 <div className="remove-cart-btn">
                     <button className="remove-cart" onClick={handleEmptyCart}>Empty Cart</button>
-                    <button className="checkout">Checkout</button>
+                    
+                    
+                    
+                    
                 </div>
             </div>
         )

@@ -5,7 +5,8 @@
 .Heading-Cart{
     text-align: center;
     font-weight: 800;
-    font-size: larger;
+    font-size: xx-large;
+    color: #282c3f;
 }
 .cart-img{
     width: 100%;
@@ -44,8 +45,8 @@
 }
 .remove-btn{
     width: 100%;
-    padding: 5px;
-    background-color: #E72744;
+    padding: 10px;
+    background-color: #ff3e6c;
     border: none;
     color: white;
     border-radius: 3px;
@@ -70,7 +71,7 @@
 }
 .total-amount,.remove-cart-btn{
     width: 100%;
-    margin: 20px;
+    margin-top: 20px;
     padding: 10px;
     font-size: larger;
     font-weight: 800;
@@ -102,13 +103,18 @@
 }
 .remove-cart{
     width: 25%;
-    background-color: #F05524;
-    color: white;
+    background-color: white;
+
+    color: #282c3f;
     padding: 10px;
-    border: none;
+    border: 2px solid #282c3f;
     border-radius: 5px;
     
 
+}
+.remove-cart:hover{
+    background-color: #282c3f;
+    color: white;
 }
 @media (max-width:927px){
     .cart-card{

@@ -19,10 +19,9 @@ const Product =({productDetails , onAddToCart, change})=> {
             <div className="metadata content-card" dangerouslySetInnerHTML={{ __html: productDetails.description }}></div>
             <div className="price content-card">{productDetails.price.formatted_with_symbol}</div>
             <div className="actions content-card"> 
-             <button type="button" className="cart-btn" onClick={()=> onAddToCart(productDetails.id,1)}> Add to cart</button>
+             <button type="button" className="cart-btn add" onClick={()=> onAddToCart(productDetails.id,1)}> Add to cart</button>
             
-             <button type="button" className="cart-btn" onClick={()=> (
-              change(productDetails.id))}> View</button>
+             <button type="button" className="cart-btn view" onClick={()=> (change(productDetails.id))}> View</button>
             
             </div>
         </div>

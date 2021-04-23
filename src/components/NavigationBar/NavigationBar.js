@@ -5,7 +5,7 @@ import RestItems from "../RestItems/RestItems"
 import SearchBar from "../SearchBar/SearchBar"
 import Logo from "./Myntra.svg" 
 
-const NavigationBar =({totalItems })=>{
+const NavigationBar =({totalItems , SearchResult})=>{
      //console.log(query)
         return(
             <div className="completeOuter">
@@ -18,7 +18,7 @@ const NavigationBar =({totalItems })=>{
                
             </div>
             <div className="searchBar navItems">
-                <SearchBar />
+                <SearchBar SearchResult={SearchResult}/>
             </div>
             <div className="rest navItems">
                 <RestItems totalItems={totalItems}/>
