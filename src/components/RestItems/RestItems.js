@@ -16,7 +16,7 @@ const RestItems = ({totalItems})=>{
                 </div> */}
 
                {
-                   Location.pathname === "/" && (
+                   Location.pathname === "/Myntra-assignment" && (
                     <div className="bag">
                 <Link to="/cart">
                     <img src={Bag} className="bag" width="15px" alt="bag"/>
