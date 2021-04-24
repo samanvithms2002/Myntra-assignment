@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Myntra-assignment/static/css/main.82a8eac9.chunk.css",
+    "main.js": "/Myntra-assignment/static/js/main.50709fe6.chunk.js",
+    "main.js.map": "/Myntra-assignment/static/js/main.50709fe6.chunk.js.map",
+    "runtime-main.js": "/Myntra-assignment/static/js/runtime-main.0b50c3ec.js",
+    "runtime-main.js.map": "/Myntra-assignment/static/js/runtime-main.0b50c3ec.js.map",
+    "static/js/2.032767e3.chunk.js": "/Myntra-assignment/static/js/2.032767e3.chunk.js",
+    "static/js/2.032767e3.chunk.js.map": "/Myntra-assignment/static/js/2.032767e3.chunk.js.map",
+    "index.html": "/Myntra-assignment/index.html",
+    "static/css/main.82a8eac9.chunk.css.map": "/Myntra-assignment/static/css/main.82a8eac9.chunk.css.map",
+    "static/js/2.032767e3.chunk.js.LICENSE.txt": "/Myntra-assignment/static/js/2.032767e3.chunk.js.LICENSE.txt",
+    "static/media/Bag.40b76dce.svg": "/Myntra-assignment/static/media/Bag.40b76dce.svg",
+    "static/media/Myntra.948d71b8.svg": "/Myntra-assignment/static/media/Myntra.948d71b8.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b50c3ec.js",
+    "static/js/2.032767e3.chunk.js",
+    "static/css/main.82a8eac9.chunk.css",
+    "static/js/main.50709fe6.chunk.js"
+  ]
+}
