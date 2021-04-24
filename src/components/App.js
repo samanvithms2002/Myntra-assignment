@@ -101,7 +101,7 @@ const fetchCart = async () =>{
            
            <Switch>
 
-                <Route exact path="/Myntra-assignment">
+                <Route exact path="/">
                 <div className="navbar">
                     <NavigationBar totalItems={cart.total_items} SearchResult={SearchResult}/>
                 </div>

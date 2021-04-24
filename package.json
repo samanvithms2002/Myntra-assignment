@@ -2,7 +2,7 @@
   "name": "myntra-assign",
   "version": "0.1.0",
   "homepage": "https://samanvithms2002.github.io/Myntra-assignment",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@chec/commerce.js": "^2.4.1",
     "@material-ui/core": "^4.11.3",
