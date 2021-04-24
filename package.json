@@ -1,7 +1,7 @@
 {
   "name": "myntra-assign",
   "version": "0.1.0",
-  "homepage": "https://samanvithms2002.github.io/myntra-assignment",
+  "homepage": "https://samanvithms2002.github.io/Myntra-assignment",
   "private": false,
   "dependencies": {
     "@chec/commerce.js": "^2.4.1",
