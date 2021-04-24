@@ -1,5 +1,5 @@
 import React from "react";
-// import Wishlist from "./Wishlist.svg";
+
 import {Link,useLocation} from "react-router-dom";
 import Bag from "./Bag.svg";
 import "./RestItems.css"

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Filters.css";
-class Filters extends React.Component{
-    render(){
+const Filters =()=>{
+    
         return(
             <div>
                 <div className="heading"> Filter</div>  
@@ -24,6 +24,6 @@ class Filters extends React.Component{
                 </div> */}
             </div>
         )
-    }
+    
 }
 export default Filters;

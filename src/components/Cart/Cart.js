@@ -1,10 +1,10 @@
 import React from "react";
-import {Link,useHistory } from "react-router-dom";
+import {Link } from "react-router-dom";
 
 import "./Cart.css"
 
 const Cart =({cart ,handleUpdateToCart, handleRemoveFromCart, handleEmptyCart})=>{
-    const history=useHistory();
+  
 
     const EmptyCart=()=>{
         return(
@@ -19,9 +19,7 @@ const Cart =({cart ,handleUpdateToCart, handleRemoveFromCart, handleEmptyCart})=
             
         )
     }
-    const pusher=()=>{
-        history.push("/checkout")
-    }
+   
 
     const FilledCart = ()=>{
         return(

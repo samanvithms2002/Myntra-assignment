@@ -1,5 +1,4 @@
 import React, {  useEffect, useState } from "react";
-// import fakestore from "../api/Fakestore";
 import {commerce} from "../lib/Commerce";
 import NavigationBar from "./NavigationBar/NavigationBar";
 import MainContent from "./MainContent/MainContent";
@@ -12,7 +11,6 @@ import "./app.css";
 const App =()=>{
 const [products,setProducts]=useState([]);
 const [cart,setCart]=useState([]);
-// const [search, setSearch]=useState('');
 const [state, setState] = useState('start')
 const [change, setChange]= useState([])
 const triggerAddTripState = () => {
@@ -21,7 +19,7 @@ const triggerAddTripState = () => {
   }
 const makeChange = async (productID)=>{
      
-    //  setState('add-trip');
+    
     const response= await  commerce.products.retrieve(productID)
     
     setChange( response)
@@ -40,9 +38,7 @@ const fetchProducts=async () =>{
 const fetchCart = async () =>{
     setCart( await commerce.cart.retrieve())
 }
-// const fetchSearch = async(QueryString)=>{
-//     setCart(await QueryString)
-// }
+
 
     useEffect(() =>{
         fetchProducts();
@@ -56,12 +52,7 @@ const fetchCart = async () =>{
         console.log(cart);
 
     }
-    // const ViewAddToCart = async (productID,quantity)=> {
-    //     const {cart} = await commerce.cart.add(productID, quantity);
-    //     setCart(cart);
-    //     console.log(cart);
-
-    // }
+  
     
     const handleUpdateToCart = async (productID,quantity)=>{
         const {cart} = await commerce.cart.update(productID,{quantity});

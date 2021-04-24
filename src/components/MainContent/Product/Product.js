@@ -1,7 +1,4 @@
 import React from "react";
-// import ItemDetails from "../../ItemDetails/ItemDetails";
-// import {BrowserRouter as Router , Switch, Route} from "react-router-dom";
-// import {Link} from "react-router-dom";
 import "./Product.css";
 
 const Product =({productDetails , onAddToCart, change})=> {
