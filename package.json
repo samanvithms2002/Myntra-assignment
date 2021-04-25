@@ -1,7 +1,7 @@
 {
   "name": "myntra-assign",
   "version": "0.1.0",
-  "homepage": "https://samanvithms2002.github.io/Myntra-assignment",
+  "homepage": ".",
   "private": false,
   "dependencies": {
     "@chec/commerce.js": "^2.4.1",
@@ -24,7 +24,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "CI=false react-scripts build",
+    "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
