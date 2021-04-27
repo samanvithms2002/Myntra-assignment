@@ -13,10 +13,11 @@ const [products,setProducts]=useState([]);
 const [cart,setCart]=useState([]);
 const [state, setState] = useState('start')
 const [change, setChange]= useState([])
-const triggerAddTripState = () => {
+// const triggerAddTripState = () => {
     
-    setState('add-trip')
-  }
+//     setState('add-trip')
+//   }
+let completeData= [];
 const makeChange = async (productID)=>{
      
     
@@ -33,8 +34,11 @@ const makeChange = async (productID)=>{
 const fetchProducts=async () =>{
     const {data} = await commerce.products.list();
     setProducts(data);
+    
 }
 
+//console.log(products)
+// console.log(completeData.name)
 const fetchCart = async () =>{
     setCart( await commerce.cart.retrieve())
 }
@@ -68,32 +72,60 @@ const fetchCart = async () =>{
         const {cart} = await commerce.cart.empty();
         setCart(cart);
     }
-    const SearchResult = async (categoryName) =>{
-            const response= await commerce.categories.retrieve(categoryName)
-            const val = [];
+    const SearchResult = (categoryName) =>{
+        console.log(categoryName)
+       // console.log(await commerce.categories.list())
+            //const {response}= await commerce.categories.retrieve('cat_ZM8X5njJJ5pv4q')
+            products.map((value)=>(
+                !(value.name).includes(categoryName) ? console.log('no'):completeData.push(value)
+                
+               
+            ))
+            //const val = [];
             // products.map(param =>
             // response.name === categoryName ?
                
             //     val.push(param)
-            
+ 
             // )
             
            
-            setProducts(response)
-            console.log(val)
+            setProducts(completeData)
+            completeData=[];
+            
+            
+           // console.log(val)
     }
-    const handleFilter=()=>{
-        setProducts(status=>{
-            if(status.sort!==" "){
-                status.products.sort((a,b)=> (status.sort==='lowest')?(a.price.formatted_with_symbol<b.price.formatted_with_symbol?1:-1):
-                (a.price.formatted_with_symbol>b.price.formatted_with_symbol?1:-1)
-                )
-            }
-            else{
-                status.products.sort((a,b)=> (a.id<b.id?1:-1))
-            }
-            return {products:status.products};
-        })
+    // const handleFilter=(param)=>{
+    //     console.log(products)
+    //     products.sort((a,b)=>)
+    //     param==='lowest'?
+        
+        
+    //     setProducts(status=>{
+            
+    //             products.sort((a,b)=> (a.price.formatted_with_symbol<b.price.formatted_with_symbol?1:-1)
+    //             (a.price.formatted_with_symbol>b.price.formatted_with_symbol?1:-1)
+    //             )
+    //             return {products:status.products};
+    //     }) :
+    //     setProducts(status=>{
+    //         status.products.sort((a,b)=> (a.id<b.id?1:-1))
+    //         return {products:status.products};
+    //     })
+           
+    // }
+    const handleFilter= async (param)=>{
+        let sorted=[]
+       
+    if(param==="lowest"){
+        sorted =  [...products].sort((a, b) =>{ return (a.price.raw) - (b.price.raw)});
+    }    
+    else if(param==="highest"){
+        sorted =  [...products].sort((a, b) =>{ return (b.price.raw) - (a.price.raw)});
+    }
+   
+    setProducts(sorted)
     }
         return(
            <Router>
@@ -108,7 +140,7 @@ const fetchCart = async () =>{
                 {
                     state==='start' &&(
                         <div className="Maincontent">
-                    <MainContent products={products} onAddToCart={handleAddToCart}  change={makeChange} handleFilter={handleFilter}/>  
+                    <MainContent products={products} onAddToCart={handleAddToCart}  change={makeChange} handleFilter={handleFilter} SearchResult={SearchResult}/>  
                         </div>
                     )
                 }

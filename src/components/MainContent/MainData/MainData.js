@@ -6,14 +6,17 @@ import "./MainData.css";
 const MainData =({products ,onAddToCart, addTrip,change, handleFilter})=>{
 //    console.log(products)
 
-
+// const selectFilter=(param)=>{
+// handleFilter(param)
+// console.log(param)
+// }
         return(
             <div>
                 <div className="sort">
-                <label for="sort" className="sort-title">Sort By Price:</label>
-                <select name="sort" id="sort" onChange={()=> handleFilter}>
-                     <option value="highest">higehstToLowest</option>
-                     <option value="lowest">LowestToHighest</option>
+                <label htmlFor="sort" className="sort-title">Sort By Price:</label>
+                <select name="sort" id="sort" onChange={(e)=> handleFilter(e.target.value)}>
+                     <option value="highest" >highest</option>
+                     <option value="lowest">lowest</option>
                      
                 </select>
                  </div> 

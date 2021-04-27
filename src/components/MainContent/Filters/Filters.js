@@ -1,13 +1,13 @@
 import React from "react";
 import "./Filters.css";
-const Filters =()=>{
+const Filters =({SearchResult})=>{
     
         return(
             <div>
                 <div className="heading"> Filter</div>  
                 <div className="radio">
-                <div className="radioChild"> <input type="radio" value="Men" name="drone"/> Men</div>
-                <div className="radioChild"> <input type="radio" value="Women" name="drone"/> Women</div>
+                <div className="radioChild"> <input type="radio" value="Men" name="drone" onClick={()=>SearchResult('Men')}/> Men</div>
+                <div className="radioChild"> <input type="radio" value="Women" name="drone" onClick={()=>SearchResult('Women')}/> Women</div>
                 {/* <div className="radioChild"> <input type="radio"/> radio3</div> */}
                 </div>
                 <div className="checkboxes">

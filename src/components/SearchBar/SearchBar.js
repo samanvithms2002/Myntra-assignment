@@ -5,22 +5,31 @@ import "./SearchBar.css"
 const SearchBar =({SearchResult})=>{
    
 const [query, setQuery] = useState('');
-const onFormSubmit=(event)=>{
+const handleChange=  (value)=>{
+    
+    setQuery(value)
+
+// console.log(value)
+// SearchResult(value);
+}
+
+const onFormSubmit = (event)=>{
     event.preventDefault();
-SearchResult(event);
-console.log(event)
+    SearchResult(query)
+//    console.log(query)
 }
 
 
         return(
             <div className="search">
-            <form onSubmit={ onFormSubmit} >
+            <form onSubmit={onFormSubmit} >
             
                 <input type="text" 
                     
-                   value={query}
                    
-                onChange={(e)=>setQuery(e.target.value)}
+                //    {...console.log(query)}
+                onChange={(e)=> handleChange(e.target.value)}
+                value={query}
                 
                   placeholder="Search"  />
                   {/* <input type="submit"  /> */}
